@@ -1,0 +1,140 @@
+.header{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    transition: 1s all ease;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    
+    &.colourChange{
+        transition: 0.5s;
+        background-color: #030e1b;
+        box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .container {
+        width: 100%;
+        margin: 0 3rem;
+
+        @media only screen and (max-width: 426px){
+            margin: 0 1rem;
+        }
+    }
+
+    nav {
+        height: 8em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: uppercase;
+        transition: 1s all ease;
+        position: relative;
+
+        @media only screen and (max-width: 768px){
+            height: 5rem;
+        }
+
+        .collapse {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            display: none;
+            transition: 1s all ease;
+
+            img {
+                height: 50px;
+                width: 50px;
+                cursor: pointer;
+            }
+
+            @media only screen and (max-width: 839px){
+                display: block;
+            }
+
+            img {
+                height: 50px;
+                width: 50px;
+                cursor: pointer;
+            }
+        }
+
+        .logo{
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            margin: 0 0;
+            padding: 0 0;
+            transition: 1s all ease;
+
+            a{
+                text-decoration: none;
+
+                .logo_svg{
+
+                    height: 80px;
+
+                    @media only screen and (max-width: 768px){
+                        height: 50px;
+                    }
+
+                    
+                }
+            }
+
+            
+            
+        }
+
+        .ul-items {
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+            align-items: center;
+            transition: 1s all ease;
+
+            @media only screen and (max-width: 839px){
+                display: none;
+            }
+
+            li{
+                margin:0 1rem;
+                transition: 1s all ease;
+
+                a{
+                    display: inline-block;
+                    text-decoration: none;
+                    color: dimgray;
+                    font-size: 15px;
+                    color: #fff;
+                    padding: 0.5rem 1rem;
+
+                    &:hover{
+                        color: #9cace0;
+                    }
+                }
+
+                &.hire{
+                    background-color: #5c74c4;
+                    border-radius: 2rem;
+                    transition: 1s all ease;
+
+                    a{
+                        color: #fff;
+                        border-radius: 2rem;
+                    }
+
+                    &:hover{
+                        background-color: #fff;
+
+                        a{
+                            color: #9cace0;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}
